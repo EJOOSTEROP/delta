@@ -22,9 +22,7 @@ ENV DELTA_PACKAGE_VERSION=delta-core_2.12:2.1.0
 
 RUN groupadd -r ${GROUP} && useradd -r -m -g ${GROUP} ${NBuser}
 
-
-COPY --chown=${NBuser} startup.sh "${HOME}"
-COPY --chown=${NBuser} quickstart.ipynb "${HOME}"
+COPY --chown=${NBuser} quickstart_binder.ipynb "${HOME}"
 RUN chown -R ${NBuser}:${GROUP} /home/${NBuser}/ \
 && chown -R ${NBuser}:${GROUP} ${WORKDIR}
 
