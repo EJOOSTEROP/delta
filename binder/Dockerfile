@@ -33,4 +33,4 @@ RUN chmod a+x startup.sh
 
 USER ${NBuser}
 
-ENTRYPOINT ["bash", "startup.sh"]
+ENTRYPOINT ["startup.sh"]
