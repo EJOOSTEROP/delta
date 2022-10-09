@@ -30,3 +30,5 @@ RUN chown -R ${NBuser}:${GROUP} /home/${NBuser}/ \
 && chown -R ${NBuser}:${GROUP} ${WORKDIR}
 
 USER ${NBuser}
+
+ENTRYPOINT ["bash", "startup.sh"]
