@@ -29,6 +29,8 @@ COPY --chown=${NBuser} ./binder/quickstart_binder.ipynb "${HOME}"
 RUN chown -R ${NBuser}:${GROUP} /home/${NBuser}/ \
 && chown -R ${NBuser}:${GROUP} ${WORKDIR}
 
+RUN chmod a+x startup.sh
+
 USER ${NBuser}
 
 ENTRYPOINT ["bash", "startup.sh"]
